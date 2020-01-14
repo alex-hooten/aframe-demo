@@ -8,13 +8,26 @@
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-item id="headstone" src="headstone.obj"></a-asset-item>
-            <a-asset-item id="headstonemat" src="headstone.mtl"></a-asset-item>
+            <a-asset-item id="headstone" src="assets/headstone.obj"></a-asset-item>
+            <a-asset-item id="headstonemat" src="assets/headstone.mtl"></a-asset-item>
         </a-assets>
-        <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
-        <!-- <a-text value="Hello, A-Frame!" color="#BBB"
-        position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text> -->
-        <a-entity position="0 0 -4" obj-model="obj: #headstone; mtl: #headstonemat" scale="0.5 0.5 0.5" rotation = "0 45 0"></a-entity>
+        <a-entity position="-1.2 -0.5 -2" obj-model="obj: #headstone; mtl: #headstonemat" scale="0.2 0.2 0.2" rotation="0 15 0">
+            <a-entity text="font: kelsonsans;
+                value: Name;
+                color: #000; align: center; wrapCount: 14; baseline: top"
+                position="6.2 10 -5" scale="5 5 5" rotation="0 0 0">
+            </a-entity>
+            <a-entity text="font: kelsonsans;
+                value: Dates;
+                color: #000; align: center; wrapCount: 14; baseline: top"
+                position="6.2 9 -5" scale="4 4 4" rotation="0 0 0">
+            </a-entity>
+            <a-entity text="font: kelsonsans;
+                value: Obituary Text Lorem ipsum dolor sit amet;
+                color: #000; align: center; wrapCount: 18; baseline: top"
+                position="6.2 8 -5" scale="3 3 3" rotation="0 0 0">
+            </a-entity>
+        </a-entity>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
         <a-sky color="#ECECEC"></a-sky>
     </a-scene>
