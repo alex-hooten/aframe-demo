@@ -6,8 +6,15 @@
     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
 </head>
 <body>
-    <a-scene physics>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="headstone" src="headstone.obj"></a-asset-item>
+            <a-asset-item id="headstonemat" src="headstone.mtl"></a-asset-item>
+        </a-assets>
         <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
+        <!-- <a-text value="Hello, A-Frame!" color="#BBB"
+        position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text> -->
+        <a-entity position="0 0 -4" obj-model="obj: #headstone; mtl: #headstonemat" scale="0.5 0.5 0.5" rotation = "0 45 0"></a-entity>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
         <a-sky color="#ECECEC"></a-sky>
     </a-scene>
